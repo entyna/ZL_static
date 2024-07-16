@@ -15,6 +15,12 @@
 </head>
 <body>
     <header>
+        <div class="header-desktop desktop-only">
+            <p>Národní 37, Praha 1</p><span>|</span>
+            <!-- <p>obchod@zlatalod.cz</p><span>|</span> -->
+            <p>+ 420 222 220 174</p><span>|</span>
+            <a class="flex-center" href=""><img class="inline-icon" src="assets/lang.svg" alt="" width="25px">English</a>
+        </div>
         <nav>
             <span id="nav-label" hidden>Navigace</span>
             <button id="btnOpen" class="nav__open" aria-expanded="false" aria-labelledby="nav-label">
@@ -38,27 +44,31 @@
     <div class="first-block">
         <h1 class="hidden">Zlatá loď</h1>
         <h2 class="hidden">Výtvarné potřeby</h2>
-        <div class="logo-text"><a href=""><img src="assets/logo_subt_outline.svg" width="100%"></a></div>
+        
         <div class="logo-anim" id="logo-anim">
             <video width="100%" playsinline autoplay muted loop><source src="assets/logo_anim.webm"/></video>
         </div>
         <div class="nav-container">
+            <div class="logo-text"><a href=""><img src="assets/logo_subt_outline_inv.svg" width="100%"></a></div>
             <nav>
-                <ul class="nav__links">
-                 <li class="nav__item"><a href class="nav__link"></a>E-shop</li>
-                 <li class="nav__item"><a href="https://artikon.cz" class="nav__link"></a>Prodejna</li>
+                <ul id="desktop-nav-ul" class="nav__links flex-column">
+                 <div><li class="nav__item"><a href="https://www.artikon.cz" class="nav__link">E-shop</a></li></div>
+                 <div><li class="nav__item"><a href="#prodejna" class="nav__link">Prodejna</a></li></div>
+                 <li class="nav__item mobile-only"><a href="tel:+420222220174" class="nav__link">222 220 174</a></li>
+                 <li class="nav__item mobile-only"><a href="mailto:obchod@zlatalod.cz" class="nav__link">obchod@zlatalod.cz</a></li>
                 </ul>
              </nav>
+             <div class="mobile-only"><img class="arrow-down" src="assets/arrow_3.svg" alt="" width="25px"></div>
         </div>
     </div>
     <main>
         <h2 id="onas">O nás</h2>
-        <p>Již od roku 1996 nabízíme rozsáhlý sortiment kvalitních materiálů pro výtvarníky, ať už profesionály, studenty, či amatéry. Naše historie sahá ale ještě dál. Víte, proč se obchod jmenuje právě Zlatá loď?</p>
+        <p>Nabízíme rozsáhlý sortiment kvalitních materiálů pro výtvarníky, ať už profesionály, studenty, či amatéry. Navštivte nás v naší prodejně nebo na e-shopu <a href="https://artikon.cz">Artikon.cz</a>.</p><p>Naše výtvarné potřeby najdete v samém srdci Prahy už od roku 1997. Historie obchodu sahá ale ještě dál. Víte, proč nese název Zlatá loď?</p>
         <div class="accordion">
             <div class="accordion-panel">
                 <h3 id="historie">
                     <button class="accordion-trigger" aria-expanded="false" aria-controlls="historie-content">
-                        Historie firmy
+                        HISTORIE FIRMY
                     </button>
                 </h3>
                 <div class="accordion-content" role="region" aria-labelledby="historie" aria-hidden="true" id="historie-content">
@@ -97,19 +107,15 @@
                 </div>
             </div>
         </div>
-        <p>Navštivte nás v naší prodejně v samém srdci Prahy nebo na e-shopu <a href="https://artikon.cz">Artikon.cz.</a></p>
         <h2 id="prodejna">Prodejna</h2>
         <p>V kamenné prodejně najdete reprezentativní výběr uměleckých barev, štětců, papírů, pláten a dalších nezbytností a pomůcek pro výtvarnou tvorbu.</p>
-        <div class="flex">
+        <div class="flex-layout">
             <div>
-                <p>Národní 416/37 – Nádvoří Platýz</p>
-                <p>110 00 Praha 1</p>
-                <p>Po – Pá: 9:00 – 19:00</p>
-                <p>So: 10:00 – 17:00</p>
-                <a href="tel:+420 222 220 174"><span class="html-icons">&#9742;</span>+420 222 220 174</a>
-                <p>obchod@zlatalod.cz</p>
+                <p><strong>Národní 416/37</strong><br>Nádvoří Platýz<br>110 00 Praha 1</p>
+                <p><strong>Po – Pá:</strong> 9:00 – 19:00<br><strong>So: 10:00</strong> – 17:00</p>
+                <p>+420 222 220 174<br>obchod@zlatalod.cz</p>
             </div>
-            <div class="map-container"></div>
+            <div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.1602436144863!2d14.417963075293427!3d50.08328661373413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94ee762cc8ff%3A0x14cd7d2bf7761e60!2zVsO9dHZhcm7DqSBQb3TFmWVieSAtIFpsYXTDoSBMb8SP!5e0!3m2!1scs!2scz!4v1721013455483!5m2!1scs!2scz" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
         </div>
         <h2 id="kontakt">Kontakt</h2>
         <p>Máte dotaz? Neváhejte se na nás obrátit.</p>

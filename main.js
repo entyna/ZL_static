@@ -53,11 +53,25 @@ media.addEventListener('change', function (e) {
   setupMobileNav(e);
 });
 
-// LOGO Animation
-var animation = bodymovin.loadAnimation({
-  container: document.getElementById('logo-anim'), // the DOM element to contain the animation
-  renderer: 'svg',
-  loop: true, // Set to false because we want to control the playback
-  autoplay: true, // Set to false to play on hover
-  path: 'assets/ZL_logo_anim.json' // the path to the animation JSON file
-});
+
+function updateNavClass() {
+  var navElement = document.getElementById("desktop-nav-ul");
+
+  if (navElement) {
+    var navHeight = navElement.offsetHeight;
+
+    if (navHeight <= 130) {
+      navElement.classList.remove("flex-column");
+      navElement.classList.add("flex-row");
+    } else {
+      navElement.classList.remove("flex-row");
+      navElement.classList.add("flex-column");
+    }
+  }
+}
+
+// Execute the function when the document is fully loaded
+document.addEventListener("DOMContentLoaded", updateNavClass);
+
+// Optional: Re-check the height and update the class on window resize
+window.addEventListener("resize", updateNavClass);
