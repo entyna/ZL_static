@@ -86,3 +86,26 @@ window.addEventListener("resize", function() {
     }
   }
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+  const logo = document.getElementById('mobile-header-logo');
+  const trigger = document.getElementById('logo-text');
+
+  // Create an IntersectionObserver instance
+  const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              // When the trigger is in the viewport
+              logo.classList.add('logo-hidden');
+              logo.classList.remove('logo-shown');
+          } else {
+              // When the trigger is out of the viewport
+              logo.classList.remove('logo-hidden');
+              logo.classList.add('logo-shown');
+          }
+      });
+  });
+
+  // Observe the trigger element
+  observer.observe(trigger);
+});

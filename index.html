@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://use.typekit.net/dyj4tqy.css">
     <title>Zlatá loď | Výtvarné potřeby</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.svg">
     <script src="https://cdn.jsdelivr.net/gh/rick-liruixin/body-scroll-lock-upgrade@v1.1.0/lib/index.umd.js"></script>
     <script src="main.js" async></script>
     <script src="accordion.js" async></script>
@@ -17,16 +18,16 @@
     <header>
         <div class="header-desktop desktop-only">
             <p>Národní 37, Praha 1</p><span>|</span>
-            <!-- <p>obchod@zlatalod.cz</p><span>|</span> -->
             <p>+ 420 222 220 174</p><span>|</span>
             <p>obchod@zlatalod.cz</p><span>|</span>
             <a href="https://www.facebook.com/zlatalod/" target="_blank"><img src="assets/fb_hover.svg" width="25px"></a><span>|</span>
             <a class="flex-center" href=""><img class="inline-icon" src="assets/lang.svg" alt="" width="25px">English</a>
         </div>
-        <nav class="nav-mobile">
+        <nav class="nav-mobile mobile-only">
             <span id="nav-label" hidden>Navigace</span>
+            <div id="mobile-header-logo" class="" ><img src="assets/logo_horiz_outline.svg" width="260px"></div>
             <button id="btnOpen" class="nav__open" aria-expanded="false" aria-labelledby="nav-label">
-                <img src="/assets/hamburger.svg" alt="" width="25" height="25">
+                <img src="assets/hamburger.svg" alt="" width="25" height="25">
             </button>
             <div class="nav__menu" role="dialog" aria-labelledby="nav-label">
                 <ul class="nav__links">
@@ -51,11 +52,11 @@
         <h1 class="hidden">Zlatá loď</h1>
         <h2 class="hidden">Výtvarné potřeby</h2>
         
-        <div class="logo-anim" id="logo-anim">
+        <div id="logo-anim" class="logo-anim" id="logo-anim">
             <video width="100%" playsinline autoplay muted loop><source src="assets/logo_anim.webm"/></video>
         </div>
         <div class="nav-container">
-            <div class="logo-text"><a href=""><img src="assets/logo_subt_outline_inv.svg" width="100%"></a></div>
+            <div id="logo-text" class="logo-text"><a href=""><img src="assets/logo-text-new.svg" width="100%"></a></div>
             <nav>
                 <ul id="desktop-nav-ul" class= "">
                  <div><li class="nav__item"><a href="https://www.artikon.cz" class="nav__link">E-shop</a></li></div>
@@ -69,7 +70,7 @@
     </div>
     <main>
         <section>
-            <div class="infobox">
+            <div id="scroll-target" class="infobox">
                 <h3>Nějaké důležité aktuální oznámení</h3>
                 <p>Vážení zákaníci,<br> v sobotu <strong>23. ledna</strong> bude prodejna zavřená z důvodu inventury. <br>Děkujeme za pochopení.</p>
             </div>
@@ -81,7 +82,7 @@
             <div class="accordion-panel">
                 <h3 id="historie">
                     <button class="accordion-trigger" aria-expanded="false" aria-controlls="historie-content">
-                        Historie firmy
+                        HISTORIE FIRMY
                     </button>
                 </h3>
                 <div class="accordion-content" role="region" aria-labelledby="historie" aria-hidden="true" id="historie-content">
@@ -125,7 +126,7 @@
             <h2>Prodejna</h2>
             <p>V kamenné prodejně najdete reprezentativní výběr uměleckých barev, štětců, papírů, pláten a dalších nezbytností a pomůcek pro výtvarnou tvorbu.</p>
             <div class="infobox">
-                <h3>Vánoční otevírací doba</h3>
+                <h3>Např. mimořádná otevírací doba</h3>
                 <p><strong>22. 12.</strong> 9:00 – 19:00</p>
                 <p><strong>23. 12. – 26. 12.</strong> Zavřeno</p>
                 <p><strong>27. 12. – 31. 12.</strong> 9:00 – 19:00</p>

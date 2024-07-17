@@ -17,9 +17,21 @@
 
 html {
     scroll-behavior: smooth;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: clip;
+
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+
 body {
+    position: relative;
     display: grid;
     min-height: calc(100dvh - var(--header-height));
     font-size: var(--font-size);
@@ -28,6 +40,7 @@ body {
     font-family: "Inter", sans-serif;
     line-height: 1.4;
     font-weight: 400;
+    overflow-x: clip;
 
     @media (width > 40rem) {
         grid-template-columns: 38% 1fr;
@@ -81,7 +94,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: calc(100svh - var(--header-height));
+    /* height: calc(100svh - var(--header-height)); */
 
     @media (width > 40rem) {
         position: sticky;
@@ -103,7 +116,7 @@ header {
 }
 
 .logo-text {
-    margin: calc(1rem + 2dvh) 0 calc(0.5rem + 2dvh) 0;
+    margin: calc(0.5rem + 2dvh) 0 calc(0.3rem + 2dvh) 0;
     width: 80%;
     max-width: 22rem;
 }
@@ -195,10 +208,26 @@ nav {
     padding: 0 2rem;
 }
 
+#mobile-header-logo {
+    
+}
+
+.logo-hidden {
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.logo-shown {
+    /* display: block; */
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
 .nav__item {
 
     list-style-type: none;
-    padding: 0.9rem 1rem 0.7rem 1rem;
+    padding: 0.7rem 1rem 0.5rem 1rem;
     border: 2px solid var(--green);
     background-color: var(--off-white);
     border-radius: 20px;
@@ -206,6 +235,7 @@ nav {
     transition: all 0.3s ease-out;
     text-align: center;
     line-height: 1rem;
+    font-size: 1.2rem;
 
 
     & a {
@@ -213,7 +243,6 @@ nav {
         text-decoration: none;
         font-family: temeraire, serif;
         font-style: italic;
-        font-size: 1.3rem;
         font-weight: 300;
     }
 
@@ -330,13 +359,14 @@ h2 {
     font-size: 2.5em;
 }
 h3 {
-    font-family: temeraire, serif;
-    font-style: italic;
+    /* font-family: temeraire, serif;
+    font-style: italic; */
 
     padding: 0;
-    /* text-transform: uppercase; */
-    font-size: clamp(1.125rem, 1.0921rem + 0.1316vw, 1.25rem);
-    font-weight: 500;
+    text-transform: uppercase;
+    /* font-size: clamp(1.125rem, 1.0921rem + 0.1316vw, 1.25rem); */
+    font-size: var(--font-size);
+    font-weight: 400;
 }
 
 .small {
