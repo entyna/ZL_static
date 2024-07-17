@@ -351,6 +351,12 @@ section {
 .hidden {
     display: none;
 }
+h1 {
+    font-family: temeraire, serif;
+    font-style: italic;
+    font-weight: 100;
+    font-size: 3em;
+}
 
 h2 {
     font-family: temeraire, serif;
