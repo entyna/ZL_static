@@ -60,18 +60,29 @@ function updateNavClass() {
   if (navElement) {
     var navHeight = navElement.offsetHeight;
 
-    if (navHeight <= 100){
-      navElement.classList.remove("flex-column");
+    if (navHeight <= 120) {
       navElement.classList.add("flex-row");
     } else {
-      navElement.classList.remove("flex-row");
       navElement.classList.add("flex-column");
     }
   }
 }
 
-// Execute the function when the document is fully loaded
-document.addEventListener("DOMContentLoaded", updateNavClass);
+// Execute the function when the window is fully loaded
+window.onload = updateNavClass;
 
 // Optional: Re-check the height and update the class on window resize
-window.addEventListener("resize", updateNavClass);
+window.addEventListener("resize", function() {
+  var navElement = document.getElementById("desktop-nav-ul");
+
+  if (navElement) {
+    var navHeight = navElement.offsetHeight;
+    navElement.classList.remove("flex-row", "flex-column");
+
+    if (navHeight <= 120) {
+      navElement.classList.add("flex-row");
+    } else {
+      navElement.classList.add("flex-column");
+    }
+  }
+});
