@@ -54,42 +54,33 @@ media.addEventListener('change', function (e) {
 });
 
 
+
 function updateNavClass() {
   var navElement = document.getElementById("desktop-nav-ul");
 
   if (navElement) {
     var navHeight = navElement.offsetHeight;
 
-    if (navHeight <= 120) {
-      navElement.classList.add("flex-row");
+    if (navHeight <= 120){
       navElement.classList.remove("flex-column");
+      navElement.classList.add("flex-row");
     } else {
-      navElement.classList.add("flex-column");
       navElement.classList.remove("flex-row");
+      navElement.classList.add("flex-column");
     }
   }
 }
 
-// Execute the function when the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", function() {
-  updateNavClass();
+// Execute the function when the window is fully loaded
+window.onload = updateNavClass;
 
-  // Re-check the height and update the class on window resize
-  window.addEventListener("resize", function() {
-    var navElement = document.getElementById("desktop-nav-ul");
+// Optional: Re-check the height and update the class on window resize
+window.addEventListener("resize", updateNavClass);
 
-    if (navElement) {
-      var navHeight = navElement.offsetHeight;
-      navElement.classList.remove("flex-row", "flex-column");
 
-      if (navHeight <= 120) {
-        navElement.classList.add("flex-row");
-      } else {
-        navElement.classList.add("flex-column");
-      }
-    }
-  });
-});
+
+
+
 
 document.addEventListener('DOMContentLoaded', function() {
   const logo = document.getElementById('mobile-header-logo');
