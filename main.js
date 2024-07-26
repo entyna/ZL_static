@@ -81,7 +81,6 @@ window.addEventListener("resize", updateNavClass);
 
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
   const logo = document.getElementById('mobile-header-logo');
   const trigger = document.getElementById('logo-text');
