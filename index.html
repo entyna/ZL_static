@@ -17,22 +17,23 @@
 <body>
     <header>
         <div class="header-desktop desktop-only">
-            <p>Národní 37, Praha 1</p><span>|</span>
-            <p>+ 420 222 220 174</p><span>|</span>
-            <p>obchod@zlatalod.cz</p><span>|</span>
-            <a href="https://www.facebook.com/zlatalod/" target="_blank"><img src="assets/fb_hover.svg" width="25px"></a><span>|</span>
-            <a class="flex-center" href=""><img class="inline-icon" src="assets/lang.svg" alt="" width="25px">English</a>
+            <span>Národní 37, Praha 1</span><span>|</span>
+            <span>+ 420 222 220 174</span><span>|</span>
+            <span>obchod@zlatalod.cz</span><span>|</span>
+            <a class="flex-center" href="https://www.facebook.com/zlatalod/" target="_blank"><img class="inline-icon" src="assets/fb_hover.svg" width="25"></a><span>|</span>
+            <a class="flex-center" href=""><img class="inline-icon" src="assets/lang.svg" alt="" width="25">English</a>
         </div>
+        <img id="mobile-header-logo" class="mobile-only" src="assets/logo_horiz_outline.svg" height="100%">
         <nav class="nav-mobile mobile-only">
             <span id="nav-label" hidden>Navigace</span>
-            <div id="mobile-header-logo" class="" ><img src="assets/logo_horiz_outline.svg" width="260px"></div>
             <button id="btnOpen" class="nav__open" aria-expanded="false" aria-labelledby="nav-label">
-                <img src="assets/hamburger.svg" alt="" width="25" height="25">
+                <img src="assets/hamburger.svg" alt="" height="100%">
             </button>
             <div class="nav__menu" role="dialog" aria-labelledby="nav-label">
                 <ul class="nav__links">
-                    <li class="nav__item"><a href="https://artikon.cz" class="nav__link">E-shop</a></li>
+                    <li class="nav__item"><a href="https://www.artikon.cz" class="nav__link">Artikon.cz <span class="regular">|</span> e-shop</a></li>
                     <li class="nav__item"><a href="#prodejna" class="nav__link">Prodejna</a></li>
+                    <li class="nav__item"><a href="#sortiment" class="nav__link">Sortiment</a></li>
                     <li class="nav__item"><a href="#kontakt" class="nav__link">Kontakt</a></li>
                     <li class="nav__item"><a href="#onas" class="nav__link">O nás</a></li>
                     <li class="nav__item"><a href="https://www.facebook.com/zlatalod/" target="_blank" class="nav__link"><img class="FA-fb" src="assets/FA-fb.svg" width="22px">Facebook</a></li>
@@ -42,7 +43,7 @@
                         <a class="lang-menu" href=""><img class="inline-icon" src="assets/lang.svg" alt="" width="25px">English</a>
                     </div>
                     <button id="btnClose" class="nav__close" aria-label="Zavřít">
-                        <img src="assets/close.svg" alt="" width="25" height="25">
+                        <img src="assets/close.svg" alt="" height="100%">
                     </button>
                 </div>
             </div>
@@ -61,7 +62,7 @@
         </div>
         <div class="nav-container">
             <nav>
-                <ul id="desktop-nav-ul" class="flex-column">
+                <ul id="firstblock-nav-ul" class="flex-column">
                  <li class="nav__item desktop-only"><a href="https://www.artikon.cz" class="nav__link">Artikon.cz <span class="regular">|</span> e-shop</a></li>
                  <li class="nav__item mobile-only"><a href="https://www.artikon.cz" class="nav__link">Artikon.cz<br><span class="small">e-shop</span></a></li>
                  <li class="nav__item desktop-only"><a href="#sortiment" class="nav__link">Sortiment</a></li>
@@ -102,7 +103,7 @@
             <div class="accordion-panel">
                 <h3 id="historie">
                     <button class="accordion-trigger" aria-expanded="false" aria-controlls="historie-content">
-                        HISTORIE FIRMY
+                        Historie firmy
                     </button>
                 </h3>
                 <div class="accordion-content" role="region" aria-labelledby="historie" aria-hidden="true" id="historie-content">

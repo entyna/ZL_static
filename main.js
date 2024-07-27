@@ -56,7 +56,7 @@ media.addEventListener('change', function (e) {
 
 
 // function updateNavClass() {
-//   var navElement = document.getElementById("desktop-nav-ul");
+//   var navElement = document.getElementById("firstblock-nav-ul");
 
 //   if (navElement) {
 //     var navHeight = navElement.offsetHeight;
