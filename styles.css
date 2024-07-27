@@ -33,6 +33,7 @@ html::-webkit-scrollbar {
 body {
     position: relative;
     display: grid;
+    width: 100vw;
     min-height: calc(100dvh - var(--header-height));
     font-size: var(--font-size);
     color: var(--green);
@@ -94,8 +95,6 @@ header {
 .first-block {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    /* height: calc(100svh - var(--header-height)); */
 
     @media (width > 40rem) {
         position: sticky;
@@ -108,28 +107,38 @@ header {
 
 #logo-anim {
     display: flex;
-    align-items: end;
-    padding: 0;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: -1px;
-    width: 60%;
-    max-width: 15rem;
-
+    overflow: hidden;
+    max-height: 15rem;
 }
 
 .logo-text {
-    margin: calc(0.5rem + 2dvh) 0 calc(0.3rem + 2dvh) 0;
-    width: 80%;
-    max-width: 22rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 7rem;
+}
+
+.grad {
+    background: linear-gradient(0deg, rgba(17, 98, 72, 0) 0%, var(--green) 70%);
+    width: 100%;
+    position: absolute;
+    height: 40vh;
+    z-index: -20;
+
 }
 
 .nav-container {
 
-    background: linear-gradient(0deg, rgba(17, 98, 72, 0) 0%, var(--green) 70%);
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
+    flex-shrink: 0;
+    overflow: hidden;
 
     @media (width > 40rem) {
 
@@ -144,8 +153,10 @@ header {
 }
 
 nav {
-
+    border: 1px solid red;
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 
     @media (width > 40rem) {
 
@@ -154,6 +165,7 @@ nav {
 
     & ul {
         height: 100%;
+        flex-grow: 1;
     }
 
     & button {
