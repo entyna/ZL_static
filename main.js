@@ -55,27 +55,27 @@ media.addEventListener('change', function (e) {
 
 
 
-function updateNavClass() {
-  var navElement = document.getElementById("desktop-nav-ul");
+// function updateNavClass() {
+//   var navElement = document.getElementById("desktop-nav-ul");
 
-  if (navElement) {
-    var navHeight = navElement.offsetHeight;
+//   if (navElement) {
+//     var navHeight = navElement.offsetHeight;
 
-    if (navHeight <= 120){
-      navElement.classList.remove("flex-column");
-      navElement.classList.add("flex-row");
-    } else {
-      navElement.classList.remove("flex-row");
-      navElement.classList.add("flex-column");
-    }
-  }
-}
+//     if (navHeight <= 100){
+//       navElement.classList.remove("flex-column");
+//       navElement.classList.add("flex-row");
+//     } else {
+//       navElement.classList.remove("flex-row");
+//       navElement.classList.add("flex-column");
+//     }
+//   }
+// }
 
-// Execute the function when the window is fully loaded
-window.onload = updateNavClass;
+// // Execute the function when the window is fully loaded
+// window.onload = updateNavClass;
 
-// Optional: Re-check the height and update the class on window resize
-window.addEventListener("resize", updateNavClass);
+// // Optional: Re-check the height and update the class on window resize
+// window.addEventListener("resize", updateNavClass);
 
 
 

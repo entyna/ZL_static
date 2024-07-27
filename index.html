@@ -23,15 +23,15 @@
             <a href="https://www.facebook.com/zlatalod/" target="_blank"><img src="assets/fb_hover.svg" width="25px"></a><span>|</span>
             <a class="flex-center" href=""><img class="inline-icon" src="assets/lang.svg" alt="" width="25px">English</a>
         </div>
+        <div id="mobile-header-logo" class="mobile-only"><img src="assets/logo_horiz_outline.svg"></div>
         <nav class="nav-mobile mobile-only">
             <span id="nav-label" hidden>Navigace</span>
-            <div id="mobile-header-logo" class="" ><img src="assets/logo_horiz_outline.svg" width="260px"></div>
             <button id="btnOpen" class="nav__open" aria-expanded="false" aria-labelledby="nav-label">
                 <img src="assets/hamburger.svg" alt="" width="25" height="25">
             </button>
             <div class="nav__menu" role="dialog" aria-labelledby="nav-label">
                 <ul class="nav__links">
-                    <li class="nav__item"><a href="https://artikon.cz" class="nav__link">E-shop</a></li>
+                    <li class="nav__item"><a href="https://artikon.cz" class="nav__link">Artikon.cz<span class="small">e-shop</span></a></li>
                     <li class="nav__item"><a href="#prodejna" class="nav__link">Prodejna</a></li>
                     <li class="nav__item"><a href="#kontakt" class="nav__link">Kontakt</a></li>
                     <li class="nav__item"><a href="#onas" class="nav__link">O nás</a></li>
@@ -53,21 +53,24 @@
         <h2 class="hidden">Výtvarné potřeby</h2>
         
         <div id="logo-anim" class="logo-anim" id="logo-anim">
-            <video width="100%" playsinline autoplay muted loop><source src="assets/logo_anim.webm"/></video>
+            <video height="100%" playsinline autoplay muted loop><source src="assets/logo_anim.webm"/></video>
         </div>
-        <div id="logo-text" class="logo-text"><a href=""><img src="assets/logo-text-new.svg" width="100%"></a></div>
+        <div id="logo-text" class="logo-text">
+            <div class="grad"></div>
+            <img src="assets/logo-text-new.svg" height="100%">
+        </div>
         <div class="nav-container">
             <nav>
-                <ul id="desktop-nav-ul" class= "flex-column">
-                    <li class="nav__item desktop-only"><a href="https://www.artikon.cz" class="nav__link">Artikon.cz <span class="regular">|</span> e-shop</a></li>
-                    <li class="nav__item mobile-only"><a href="https://www.artikon.cz" class="nav__link">Artikon.cz<br><span class="small">e-shop</span></a></li>
-                    <li class="nav__item desktop-only"><a href="#sortiment" class="nav__link">Sortiment</a></li>
-                    <li class="nav__item desktop-only"><a href="#sortiment" class="nav__link">O nás</a></li>
-                    <li class="nav__item mobile-only"><a href="tel:+420222220174" class="nav__link">Zavolejte nám<br><span class="small">222 220 174</span></a></li>
-                    <li class="nav__item mobile-only"><a href="mailto:obchod@zlatalod.cz" class="nav__link">Napište nám<br><span class="small">obchod@zlatalod.cz</span></a></li>
+                <ul id="desktop-nav-ul" class="flex-column">
+                 <li class="nav__item desktop-only"><a href="https://www.artikon.cz" class="nav__link">Artikon.cz <span class="regular">|</span> e-shop</a></li>
+                 <li class="nav__item mobile-only"><a href="https://www.artikon.cz" class="nav__link">Artikon.cz<br><span class="small">e-shop</span></a></li>
+                 <li class="nav__item desktop-only"><a href="#sortiment" class="nav__link">Sortiment</a></li>
+                 <li class="nav__item desktop-only"><a href="#sortiment" class="nav__link">O nás</a></li>
+                 <li class="nav__item mobile-only"><a href="tel:+420222220174" class="nav__link">Zavolejte nám<br><span class="small">222 220 174</span></a></li>
+                 <li class="nav__item mobile-only"><a href="mailto:obchod@zlatalod.cz" class="nav__link">Napište nám<br><span class="small">obchod@zlatalod.cz</span></a></li>
                 </ul>
              </nav>
-             <div class="mobile-only"><img class="arrow-down" src="assets/arrow_3.svg" alt="" width="25px"></div>
+             <div class="mobile-only"><img class="arrow-down" src="assets/arrow_3.svg" alt=""></div>
         </div>
     </div>
     <main>
@@ -77,14 +80,29 @@
                 <p>Vážení zákaníci,<br> v sobotu <strong>23. ledna</strong> bude prodejna zavřená z důvodu inventury. <br>Děkujeme za pochopení.</p>
             </div>
         </section>
+        <section id="prodejna">
+            <h2>Prodejna</h2>
+            <p>V kamenné prodejně najdete reprezentativní výběr uměleckých barev, štětců, papírů, pláten a dalších nezbytností a pomůcek pro výtvarnou tvorbu.</p>
+            <div class="prodejna">
+                <div>
+                    <h3>Výtvarné potřeby<br>Zlatá loď</h3>
+                    <p><strong>Národní 416/37</strong><br>Nádvoří Platýz<br>110 00 Praha 1</p>
+                    <p><strong>Po – Pá:</strong> 9:00 – 19:00<br><strong>So:</strong> 10:00 – 17:00</p>
+                    <p>+420 222 220 174<br>obchod@zlatalod.cz</p>
+                </div>
+                <div class="map-container">
+                    <iframe class="map-container" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10240.641746479765!2d14.420537999999999!3d50.083283!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94ee762cc8ff%3A0x14cd7d2bf7761e60!2zVsO9dHZhcm7DqSBQb3TFmWVieSAtIFpsYXTDoSBMb8SP!5e0!3m2!1scs!2scz!4v1721174424037!5m2!1scs!2scz" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
         <section id="onas">
         <h2>O nás</h2>
-        <p>Nabízíme rozsáhlý sortiment kvalitních materiálů pro výtvarníky, ať už profesionály, studenty, či amatéry. Navštivte nás v naší prodejně nebo na e-shopu <a href="https://artikon.cz">Artikon.cz</a>.</p><p>Naše výtvarné potřeby najdete v samém srdci Prahy už od roku 1997. Historie obchodu sahá ale ještě dál. Víte, proč nese název Zlatá loď?</p>
+        <p>Nabízíme rozsáhlý sortiment kvalitních materiálů pro výtvarníky, ať už profesionály, studenty, či amatéry. Navštivte nás v naší prodejně nebo na e-shopu <a href="https://artikon.cz">Artikon.cz</a>.</p><p>Naše výtvarné potřeby najdete v samém srdci Prahy už od roku 1996. Historie obchodu sahá ale ještě dál. Víte, proč nese název Zlatá loď?</p>
         <div class="accordion">
             <div class="accordion-panel">
                 <h3 id="historie">
                     <button class="accordion-trigger" aria-expanded="false" aria-controlls="historie-content">
-                        HISTORIE FIRMY
+                        Historie firmy
                     </button>
                 </h3>
                 <div class="accordion-content" role="region" aria-labelledby="historie" aria-hidden="true" id="historie-content">
@@ -128,27 +146,6 @@
             <h2>Sortiment</h2>
             <p>/Tady může být specifikace sortimentu a třeba i proklik na <a href="https://entyna.github.io/ZL_static/stranka.html">další stránku</a>./</p>
 
-        </section>
-        <section id="prodejna">
-            <h2>Prodejna</h2>
-            <p>V kamenné prodejně najdete reprezentativní výběr uměleckých barev, štětců, papírů, pláten a dalších nezbytností a pomůcek pro výtvarnou tvorbu.</p>
-            <div class="infobox">
-                <h3>Např. mimořádná otevírací doba</h3>
-                <p><strong>22. 12.</strong> 9:00 – 19:00</p>
-                <p><strong>23. 12. – 26. 12.</strong> Zavřeno</p>
-                <p><strong>27. 12. – 31. 12.</strong> 9:00 – 19:00</p>
-            </div>
-            <div class="prodejna">
-                <div>
-                    <h3>Výtvarné potřeby<br>Zlatá loď</h3>
-                    <p><strong>Národní 416/37</strong><br>Nádvoří Platýz<br>110 00 Praha 1</p>
-                    <p><strong>Po – Pá:</strong> 9:00 – 19:00<br><strong>So: 10:00</strong> – 17:00</p>
-                    <p>+420 222 220 174<br>obchod@zlatalod.cz</p>
-                </div>
-                <div class="map-container">
-                    <iframe class="map-container" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10240.641746479765!2d14.420537999999999!3d50.083283!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94ee762cc8ff%3A0x14cd7d2bf7761e60!2zVsO9dHZhcm7DqSBQb3TFmWVieSAtIFpsYXTDoSBMb8SP!5e0!3m2!1scs!2scz!4v1721174424037!5m2!1scs!2scz" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
         </section>
         <section  id="kontakt" class="">
             <h2>Kontakt</h2>
