@@ -61,7 +61,7 @@ media.addEventListener('change', function (e) {
 //   if (navElement) {
 //     var navHeight = navElement.offsetHeight;
 
-//     if (navHeight <= 120){
+//     if (navHeight <= 100){
 //       navElement.classList.remove("flex-column");
 //       navElement.classList.add("flex-row");
 //     } else {

@@ -44,8 +44,12 @@ body {
     overflow-x: clip;
 
     @media (width > 40rem) {
-        grid-template-columns: 38% 1fr;
+        grid-template-columns: 35% 1fr;
     }
+
+    /* @media (width > 60rem) {
+        grid-template-columns: 28% 1fr;
+    } */
 }
 
 p {
@@ -95,8 +99,11 @@ header {
 .first-block {
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    height: calc(100svh - var(--header-height));
 
     @media (width > 40rem) {
+        width: auto;
         position: sticky;
         top: 0;
         height: calc(100dvh - var(--header-height));
@@ -105,29 +112,44 @@ header {
     }
 }
 
-#logo-anim {
+.logo-anim {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: end;
     margin-bottom: -1px;
     overflow: hidden;
-    max-height: 15rem;
+    padding: 0 2rem;
+    flex-shrink: 3;
+    /* min-height: 12rem; */
+    max-height: 16rem;
+
+    & video {
+        max-width: 100%;
+    }
 }
 
 .logo-text {
     display: flex;
     flex-direction: column;
+    align-items: center;
     overflow: hidden;
-    max-height: 7rem;
-}
+    
+    /* min-height: 7rem; */
+    
+    & img {
+        padding: 1rem 2rem 1.5rem;
+        max-width: 25rem;
+    }
 
-.grad {
-    background: linear-gradient(0deg, rgba(17, 98, 72, 0) 0%, var(--green) 70%);
-    width: 100%;
-    position: absolute;
-    height: 40vh;
-    z-index: -20;
-
+    & .grad {
+        background: linear-gradient(0deg, rgba(17, 98, 72, 0) 0%, var(--green) 70%);
+        width: 100%;
+        position: absolute;
+        height: 40vh;
+        z-index: -20;
+    
+    }
 }
 
 .nav-container {
@@ -149,14 +171,16 @@ header {
 }
 
 .arrow-down {
+    width: 1rem;
+    height: min-content;
     transform: rotate(90deg);
 }
 
 nav {
-    border: 1px solid red;
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    padding-bottom: 1rem;
 
     @media (width > 40rem) {
 
@@ -164,6 +188,7 @@ nav {
     }
 
     & ul {
+
         height: 100%;
         flex-grow: 1;
     }
@@ -266,9 +291,9 @@ nav {
     }
 
     @media (width < 40rem) {
-        padding: 0.7rem 1rem 0.5rem 1rem;
+        padding: 0.7rem 1rem 0.5rem;
         font-size: 1.6rem;
-        line-height: 1.2rem;
+        line-height: 1.4rem;
     }
 }
 
@@ -336,14 +361,12 @@ section {
 .flex-column {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
     gap: 0.4rem;
 }
 
 .flex-row {
 
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
     gap: 1rem;
 }
@@ -399,6 +422,11 @@ h3 {
         text-transform: uppercase;
     }
 
+}
+
+.regular {
+    font-style: normal;
+    font-weight: 600;
 }
 
 .small {
